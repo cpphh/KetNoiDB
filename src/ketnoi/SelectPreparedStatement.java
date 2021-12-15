@@ -9,6 +9,9 @@ public class SelectPreparedStatement {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		long startTime = System.currentTimeMillis();
+		
 		Connection conn = ConnectMysql.getConnect();
 		
 		String sql = "select * from person where id = ?";
@@ -24,6 +27,8 @@ public class SelectPreparedStatement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		System.out.println("Total execution time: " + (System.currentTimeMillis() - startTime));
 
 	}
 
